@@ -1,0 +1,1 @@
+# garant-smeta-aurori-align
