@@ -27,6 +27,19 @@ main {
   flex-grow: 1;
 }
 
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
 .navbar-expand-lg .navbar-collapse {
   flex-grow: 0;
 }
@@ -199,7 +212,7 @@ main {
 }
 
 .doc-types-journal::before {
-  background-image: url(../img/note.svg)
+  background-image: url(../img/note-1.svg)
 }
 
 .doc-types-material::before {
@@ -329,6 +342,156 @@ main {
 
 @media (max-width: 991.98px) {
   .services-item::before {
-    top: -5px;
+    top: -7px;
   }
+}
+
+.price {
+  background-color: #0762bb;
+}
+
+.price-item {
+  min-height: 600px;
+  padding: 14rem 2.5rem 6.25rem;
+}
+
+.price-item-dark {
+  background-color: #0656a4;
+}
+
+.price-item-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.price-item-heading {
+  position: relative;
+
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: #fff;
+  text-align: center;
+}
+
+.price-item-heading::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -140px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+}
+
+.price-heading-local::before {
+  background-image: url(../img/calculator-big.svg);
+}
+
+.price-heading-correction::before {
+  background-image: url(../img/pen.svg);
+}
+
+.price-heading-tender::before {
+  background-image: url(../img/note-2.svg);
+  transform: translateX(-37%);
+}
+
+.price-heading-material::before {
+  background-image: url(../img/junk.svg);
+}
+
+.price-heading-survey::before {
+  background-image: url(../img/map.svg);
+  transform: translateX(-39%);
+}
+
+.price-heading-field::before {
+  background-image: url(../img/car.svg);
+  transform: translateX(-42%);
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-item-price {
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.price-item-unit {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.price-item-btn {
+  position: relative;
+  display: block;
+  padding: 1rem 1.6rem;
+  width: 100%;
+
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: .25s all linear;
+
+  overflow: hidden;
+  z-index: 10;
+}
+
+.price-item-btn::before,
+.price-item-btn::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+
+  background-color: #fff;
+  transition: .2s all linear;
+
+  z-index: -1;
+}
+
+.price-item-btn::before {
+  right: 100%;
+}
+
+.price-item-btn::after {
+  left: 100%;
+}
+
+.price-item-btn:hover,
+.price-item-btn:focus {
+  color: #0762bb;
+  text-decoration: none;
+
+  border: 1px solid #fff;
+}
+
+.price-item-btn:hover::before,
+.price-item-btn:focus::before {
+  right: 50%;
+}
+
+.price-item-btn:hover::after,
+.price-item-btn:focus::after {
+  left: 50%;
+}
+
+.price-item-btn:active {
+  box-shadow: 0 0 0 3px #c0d4e8;
 }
