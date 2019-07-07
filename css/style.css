@@ -495,3 +495,45 @@ main {
 .price-item-btn:active {
   box-shadow: 0 0 0 3px #c0d4e8;
 }
+
+.order {
+  padding-bottom: 5rem;
+  min-height: 750px;
+
+  background-color: #837f7e;
+  background-image: url(../img/form-calculator.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .order {
+    background-image: url(../img/form-calculator-medium.jpg);
+  }
+}
+
+.order-heading {
+  margin: 0;
+  padding-top: 6.25rem;
+  margin-bottom: 1.3rem;
+
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .order {
+    padding-bottom: 4rem;
+  }
+}
+
+.order-description {
+  margin-bottom: 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
