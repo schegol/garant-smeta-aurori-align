@@ -139,10 +139,14 @@ main {
 }
 
 .second-level-heading {
+  margin-top: 6.25rem;
+  margin-bottom: 2.2rem;
+
   font-size: 2.1rem;
   line-height: 2.4rem;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 
 
@@ -160,14 +164,7 @@ main {
   }
 }
 
-.doc-types-heading {
-  margin-top: 6.25rem;
-  margin-bottom: 2.2rem;
-
-  text-align: center;
-}
-
-.doc-types-list .row {
+.section-list .row {
   margin-bottom: 5rem;
 }
 
@@ -230,11 +227,11 @@ main {
     margin-top: 4rem;
   }
 
-  .doc-types-list .row {
+  .section-list .row {
     margin-bottom: 0;
   }
 
-  .doc-types-list {
+  .section-list {
     margin-bottom: 4rem;
   }
 }
@@ -301,5 +298,37 @@ main {
 
   .software-list ul {
     font-size: 1.6rem;
+  }
+}
+
+.services-heading {
+  margin-bottom: 3.125rem;
+}
+
+.services-item {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 1.5rem;
+
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.services-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+
+  background-image: url(../img/check.svg);
+}
+
+@media (max-width: 991.98px) {
+  .services-item::before {
+    top: -5px;
   }
 }
