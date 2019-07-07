@@ -514,8 +514,9 @@ main {
 }
 
 .order {
+  padding-top: 5rem;
   padding-bottom: 5rem;
-  min-height: 750px;
+  /* min-height: 750px; */
 
   background-color: #837f7e;
   background-position: center;
@@ -538,7 +539,7 @@ main {
 
 .order-heading {
   margin: 0;
-  padding-top: 6.25rem;
+  padding-top: 0;
   margin-bottom: 1.3rem;
 
   color: #fff;
@@ -551,7 +552,7 @@ main {
 }
 
 .order-description {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.2rem;
 
   font-size: 1rem;
   line-height: 1.5rem;
@@ -560,8 +561,57 @@ main {
   text-align: center;
 }
 
+.order-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.order-form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-form-input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: .8rem;
+
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.order-form-input:focus {
+ box-shadow: 0 0 5px #0762bb;
+}
+
+.order-form-textarea {
+  resize: none;
+}
+
+.order-form-submit {
+  width: 125px;
+  min-height: 50px;
+
+  color: #fff;
+  text-transform: uppercase;
+
+  background-color: rgba(7, 98, 187, 1);
+  transition: .3s all;
+  border: none;
+}
+
+.order-form-submit:hover,
+.order-form-submit:focus {
+  background-color: rgba(7, 98, 187, .8);
+}
+
+.g-recaptcha {
+  margin-bottom: 15px;
+}
+
 .contacts {
-  /* min-height: 130px; */
   padding-top: 30px;
   padding-bottom: 30px;
 
