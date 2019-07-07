@@ -5,15 +5,17 @@ body {
   flex-direction: column;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 35px;
-  line-height: 35px;
   font-weight: 400;
+  color: #000;
 
   overflow-x: hidden;
 }
 
 html {
   display: flex;
+
+  font-size: 100%;
+  line-height: 120%;
 }
 
 header,
@@ -23,4 +25,36 @@ footer {
 
 main {
   flex-grow: 1;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+  font-size: .9rem;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #0762bb;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.introductions {
+  background-color: #28272d;
 }
