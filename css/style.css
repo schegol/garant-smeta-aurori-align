@@ -72,15 +72,21 @@ main {
   min-height: 530px;
 
   background-color: #28272d;
-  background-image: url(../img/calculator.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+
 @media screen and (max-width: 1023.98px) {
   .introductions {
     background-image: url(../img/calculator-medium.jpg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .introductions {
+    background-image: url(../img/calculator.jpg);
   }
 }
 
@@ -512,7 +518,6 @@ main {
   min-height: 750px;
 
   background-color: #837f7e;
-  background-image: url(../img/form-calculator.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -522,6 +527,12 @@ main {
 @media screen and (max-width: 1023.98px) {
   .order {
     background-image: url(../img/form-calculator-medium.jpg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .order {
+    background-image: url(../img/form-calculator.jpg);
   }
 }
 
@@ -636,8 +647,7 @@ main {
 }
 
 .module-trigger-link:hover,
-.module-trigger-link:focus,
-.module-trigger-link:active {
+.module-trigger-link:focus {
   color: #fff;
   text-decoration: none;
 
