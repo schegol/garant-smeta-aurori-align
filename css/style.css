@@ -56,5 +56,66 @@ main {
 }
 
 .introductions {
+  height: 530px;
+
   background-color: #28272d;
+  background-image: url(../img/calculator.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .introductions {
+    background-image: url(../img/calculator-medium.jpg);
+  }
+}
+
+.introductions-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100%;
+  padding: 90px 15px;
+}
+
+.site-heading {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.introductions-description {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  color: #fff;
+  text-align: center;
+}
+
+.introductions-order-link {
+  display: block;
+  padding: 1.1rem 2.7rem;
+
+  font-size: 1.4rem;
+  color: #fff;
+
+  background-color: #0656a4;
+  border: 1px solid #212121;
+  border-radius: 5px;
+}
+
+.introductions-order-link:hover,
+.introductions-order-link:focus {
+  color: #fff;
+  text-decoration: none;
+
+  background-color: #0762bb;
+  border-color: #c8c8ce;
+  /* box-shadow: 0 0 0 1px #c8c8ce; */
+}
+
+.introductions-order-link:active {
+  box-shadow: 0 0 0 3px #c8c8ce;
 }
