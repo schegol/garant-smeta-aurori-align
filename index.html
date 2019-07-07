@@ -244,18 +244,20 @@
             Оставьте свои данные, и мы свяжемся с Вами, чтобы ответить на интересующие Вас вопросы и/или принять в работу Ваш заказ.
           </p>
           <form class="order-form" action="" method="post" enctype="multipart/form-data">
-            <fieldset class="order-form-wrap">
-              <legend class="visually-hidden">Заполните форму для обратной связи</legend>
-              <label class="visually-hidden" for="form-name">Введите ваше имя</label>
-              <input class="order-form-input" type="text" name="form-name" id="form-name" placeholder="Ваше имя*" required>
-              <label class="visually-hidden" for="form-email">Введите вашу электронную почту</label>
-              <input class="order-form-input" type="email" name="form-email" id="form-email" placeholder="Ваш email*" required>
-              <label class="visually-hidden" for="form-phone">Введите ваш номер телефона</label>
-              <input class="order-form-input" type="text" name="form-phone" id="form-phone" placeholder="Ваш телефон">
-              <label class="visually-hidden" for="form-message">Введите ваше сообщение</label>
-              <textarea class="order-form-input order-form-textarea" type="text" name="form-message" id="form-message" placeholder="Ваше сообщение*" required rows="4"></textarea>
-              <div class="g-recaptcha" data-sitekey="6Lc-9I8UAAAAAAP5mTkS_aQMCpZdcejDFB-qLXJm"></div>
-              <button class="order-form-submit" type="submit">Отправить</button>
+            <fieldset>
+              <div class="order-form-wrap">
+                <legend class="visually-hidden">Заполните форму для обратной связи</legend>
+                <label class="visually-hidden" for="form-name">Введите ваше имя</label>
+                <input class="order-form-input" type="text" name="form-name" id="form-name" placeholder="Ваше имя*" required>
+                <label class="visually-hidden" for="form-email">Введите вашу электронную почту</label>
+                <input class="order-form-input" type="email" name="form-email" id="form-email" placeholder="Ваш email*" required>
+                <label class="visually-hidden" for="form-phone">Введите ваш номер телефона</label>
+                <input class="order-form-input" type="text" name="form-phone" id="form-phone" placeholder="Ваш телефон">
+                <label class="visually-hidden" for="form-message">Введите ваше сообщение</label>
+                <textarea class="order-form-input order-form-textarea" type="text" name="form-message" id="form-message" placeholder="Ваше сообщение*" required rows="4"></textarea>
+                <div class="g-recaptcha" data-sitekey="6Lc-9I8UAAAAAAP5mTkS_aQMCpZdcejDFB-qLXJm"></div>
+                <button class="order-form-submit" type="submit">Отправить</button>
+              </div>
             </fieldset>
           </form>
         </div>
@@ -279,11 +281,41 @@
     </footer>
 
     <div class="module-trigger">
-      <a class="module-trigger-link" href="#order" tabindex="2">Оставить заявку</a>
+      <a class="module-trigger-link" href="#order" tabindex="2" data-toggle="modal" data-target="#order-modal">Оставить заявку</a>
     </div>
 
-    <div class="to-top-trigger">
-      <a class="to-top-link" id="to-top"></a>
+    <div class="to-top-trigger" id="to-top-block">
+      <a class="to-top-link" id="to-top" aria-label="Подняться наверх страницы"></a>
+    </div>
+
+    <div class="modal-overlay modal animated fadeIn" id="order-modal" tabindex="-1" role="dialog">
+      <section class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h2>Вы можете оставить заявку или задать вопрос</h2>
+          </div>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть форму записи на прием"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form class="order-form" action="" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <div class="order-form-wrap">
+                <legend class="visually-hidden">Заполните форму для обратной связи</legend>
+                <label class="visually-hidden" for="form-name">Введите ваше имя</label>
+                <input class="order-form-input" type="text" name="form-name" id="form-name" placeholder="Ваше имя*" required>
+                <label class="visually-hidden" for="form-email">Введите вашу электронную почту</label>
+                <input class="order-form-input" type="email" name="form-email" id="form-email" placeholder="Ваш email*" required>
+                <label class="visually-hidden" for="form-phone">Введите ваш номер телефона</label>
+                <input class="order-form-input" type="text" name="form-phone" id="form-phone" placeholder="Ваш телефон">
+                <label class="visually-hidden" for="form-message">Введите ваше сообщение</label>
+                <textarea class="order-form-input order-form-textarea" type="text" name="form-message" id="form-message" placeholder="Ваше сообщение*" required rows="4"></textarea>
+                <div class="g-recaptcha" data-sitekey="6Lc-9I8UAAAAAAP5mTkS_aQMCpZdcejDFB-qLXJm"></div>
+                <button class="order-form-submit" type="submit">Отправить</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
     </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>

@@ -1,3 +1,9 @@
+//отключение действия по нажатию на триггер модалки://
+var $toTopBlock = $(".module-trigger");
+closeWriteUs.addEventListener("click", function (evt) {
+  evt.preventDefault();
+});
+
 //smooth scroll://
 
 $('a[href*="#"]')
@@ -31,12 +37,20 @@ $('a[href*="#"]')
 
 //back-to-top scroll://
 
-$('#to-top').fadeIn()
-.click(function() {
-  $(".header").animate({
-    scrollTop: 0
-  }, 700);
-  $('html,body').animate({
-    scrollTop: 0
-  }, 700);
+var $toTopBlock = $("#to-top-block");
+if ($(this).scrollTop() < 150) {
+  $toTopBlock.hide();
+}
+
+$(window).on('scroll', function() {
+  if ($(this).scrollTop() > 150) {
+    $toTopBlock.fadeIn(500);
+  } else {
+    $toTopBlock.fadeOut(500);
+  }
+});
+
+var $backToTop = $("#to-top");
+$backToTop.on('click', function(e) {
+  $("html, body").animate({scrollTop: 0}, 700);
 });
