@@ -537,3 +537,57 @@ main {
   color: #fff;
   text-align: center;
 }
+
+.contacts {
+  /* min-height: 130px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: #0762bb;
+  border-bottom: 30px solid #0656a4;
+
+  box-sizing: content-box;
+}
+
+.contacts-list {
+  padding: 0;
+  padding-left: 35px;
+  margin: 0;
+
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #fff;
+
+  list-style: none;
+}
+
+.contacts-list a {
+  color: inherit;
+}
+
+.contacts-list li {
+  position: relative;
+}
+
+.contacts-list li::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: -34px;
+  top: 2px;
+
+  background-repeat: no-repeat;
+}
+
+.contacts-list-company::before {
+  background-image: url(../img/users.svg);
+}
+
+.contacts-list-phones::before {
+  background-image: url(../img/phone.svg);
+}
+
+.contacts-list-email::before {
+  background-image: url(../img/mail.svg);
+}
