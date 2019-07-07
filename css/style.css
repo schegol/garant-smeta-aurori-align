@@ -85,6 +85,8 @@ main {
   line-height: 2.2rem;
   font-weight: 300;
   color: #fff;
+
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
 
 .introductions-description {
@@ -92,6 +94,22 @@ main {
   line-height: 1.7rem;
   color: #fff;
   text-align: center;
+
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 575.98px) {
+  .introductions-description {
+    font-size: 1.2rem;
+    line-height: 1.35rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .introductions-description {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
 }
 
 .introductions-order-link {
@@ -118,4 +136,170 @@ main {
 
 .introductions-order-link:active {
   box-shadow: 0 0 0 3px #c8c8ce;
+}
+
+.second-level-heading {
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 575.98px) {
+  .second-level-heading {
+    font-size: 1.6rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .second-level-heading {
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+  }
+}
+
+.doc-types-heading {
+  margin-top: 6.25rem;
+  margin-bottom: 2.2rem;
+
+  text-align: center;
+}
+
+.doc-types-list .row {
+  margin-bottom: 5rem;
+}
+
+.doc-types-item {
+  position: relative;
+  padding-left: 35px;
+  /* margin-bottom: 4.4rem; */
+  margin-bottom: 1.25rem;
+
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  font-weight: 300;
+}
+
+.doc-types-item::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+
+  background-repeat: no-repeat;
+}
+
+.doc-types-local::before {
+  background-image: url(../img/calculator.svg)
+}
+
+.doc-types-object::before {
+  background-image: url(../img/home.svg)
+}
+
+.doc-types-journal::before {
+  background-image: url(../img/note.svg)
+}
+
+.doc-types-material::before {
+  background-image: url(../img/box1.svg)
+}
+
+.doc-types-outgo::before {
+  background-image: url(../img/trash.svg)
+}
+
+.doc-types-summary::before {
+  background-image: url(../img/hammer.svg)
+}
+
+.doc-types-defect::before {
+  background-image: url(../img/tools.svg)
+}
+
+.doc-types-value::before {
+  background-image: url(../img/cash.svg)
+}
+
+@media (max-width: 991.98px) {
+  .doc-types-heading {
+    margin-top: 4rem;
+  }
+
+  .doc-types-list .row {
+    margin-bottom: 0;
+  }
+
+  .doc-types-list {
+    margin-bottom: 4rem;
+  }
+}
+
+.software-list {
+  background-color: #f9f9f9;
+}
+
+.software-list .col-12 {
+  min-height: 380px;
+}
+
+ .software-list-image {
+  background-image: url(../img/monitor.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+ }
+
+.software-list-text {
+  padding: 6.25rem 1rem 6.25rem 3.125rem;
+}
+
+.software-list-heading {
+  margin-bottom: 30px;
+
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #0762bb;
+}
+
+.software-list ul {
+  padding: 0;
+
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: 300;
+
+  list-style: none;
+}
+
+@media (max-width: 767.98px) {
+  .software-list-image {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .software-list .col-12 {
+    min-height: 200px;
+  }
+
+  .software-list-text {
+    padding: 4rem 1rem 4rem;
+  }
+
+  .software-list-heading {
+    margin-bottom: 30px;
+
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .software-list ul {
+    font-size: 1.6rem;
+  }
 }
