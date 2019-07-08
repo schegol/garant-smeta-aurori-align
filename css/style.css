@@ -27,6 +27,39 @@ main {
   flex-grow: 1;
 }
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -25%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: 0;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-60%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(60%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: 0;
+  }
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
