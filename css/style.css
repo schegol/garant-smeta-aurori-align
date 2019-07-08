@@ -624,7 +624,7 @@ main {
 }
 
 .order-form-input:focus {
- box-shadow: 0 0 5px #0762bb;
+  box-shadow: 0 0 5px #0762bb;
 }
 
 .order-form-textarea {
@@ -873,7 +873,7 @@ main {
 }
 
 .modal-body .order-form-input:focus {
-  border: 1px solid #0762bb;
+  border: 1px solid transparent;
 }
 
 .modal-body .order-form-submit {
