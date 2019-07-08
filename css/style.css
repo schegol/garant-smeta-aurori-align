@@ -150,6 +150,8 @@ main {
 }
 
 .introductions-description {
+  max-width: 100%;
+
   font-size: 1.5rem;
   line-height: 1.7rem;
   color: #fff;
