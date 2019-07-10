@@ -252,7 +252,7 @@
           <p class="order-description">
             Оставьте свои данные, и мы свяжемся с Вами, чтобы ответить на интересующие Вас вопросы и/или принять в работу Ваш заказ.
           </p>
-          <form class="order-form" action="" method="post" enctype="multipart/form-data">
+          <form class="order-form" id="page-form" action="action.php" method="post">
             <fieldset>
               <div class="order-form-wrap">
                 <legend class="visually-hidden">Заполните форму для обратной связи</legend>
@@ -264,8 +264,8 @@
                 <input class="order-form-input" type="text" name="form-phone" id="form-phone" placeholder="Ваш телефон">
                 <label class="visually-hidden" for="form-message">Введите ваше сообщение</label>
                 <textarea class="order-form-input order-form-textarea" type="text" name="form-message" id="form-message" placeholder="Ваше сообщение*" required rows="4"></textarea>
-                <div class="g-recaptcha" data-sitekey="6Lc-9I8UAAAAAAP5mTkS_aQMCpZdcejDFB-qLXJm"></div>
-                <button class="order-form-submit" type="submit">Отправить</button>
+                <div class="g-recaptcha" data-sitekey="6LeYr6wUAAAAAKUvFutGzgMXJZeFMfOmWF_b-jHh"></div>
+                <button class="order-form-submit" id="page-form-submit" type="submit" name="form-submit">Отправить</button>
               </div>
             </fieldset>
           </form>
@@ -306,7 +306,7 @@
           <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть форму записи на прием"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
-          <form class="order-form" action="" method="post" enctype="multipart/form-data">
+          <form class="order-form" id="modal-form">
             <fieldset>
               <div class="order-form-wrap">
                 <legend class="visually-hidden">Заполните форму для обратной связи</legend>
@@ -318,8 +318,8 @@
                 <input class="order-form-input" type="text" name="form-phone" id="modal-form-phone" placeholder="Ваш телефон">
                 <label class="visually-hidden" for="form-message">Введите ваше сообщение</label>
                 <textarea class="order-form-input order-form-textarea" type="text" name="form-message" id="modal-form-message" placeholder="Ваше сообщение*" required rows="4"></textarea>
-                <div class="g-recaptcha" data-sitekey="6Lc-9I8UAAAAAAP5mTkS_aQMCpZdcejDFB-qLXJm"></div>
-                <button class="order-form-submit" type="submit">Отправить</button>
+                <div class="g-recaptcha" data-sitekey="6LeYr6wUAAAAAKUvFutGzgMXJZeFMfOmWF_b-jHh"></div>
+                <button class="order-form-submit" id="modal-form-submit" type="submit" name="form-submit">Отправить</button>
               </div>
             </fieldset>
           </form>

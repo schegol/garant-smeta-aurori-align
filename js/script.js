@@ -50,6 +50,7 @@ $('a[href*="#"]')
   });
 
 //parallax://
+
 window.addEventListener('scroll', function(){
   var scrollPosition = window.pageYOffset;
   var bgParallax = document.getElementsByClassName('parallax')[0];
@@ -57,6 +58,40 @@ window.addEventListener('scroll', function(){
   if (scrollPosition > bgParallax.offsetTop && scrollPosition <= limit){
     bgParallax.style.backgroundPositionY = (50 - 10*scrollPosition/limit) + '%';
   }else{
-    bgParallax.style.backgroundPositionY = '50%';    
+    bgParallax.style.backgroundPositionY = '50%';
   }
 });
+
+//ajax-обработка формы//
+
+$(function() {
+      $('#page-form').submit(function(e) {
+        var $form = $(this);
+        $.ajax({
+          type: $form.attr('method'),
+          url: $form.attr('action'),
+          data: $form.serialize()
+        }).done(function() {
+          alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
+        }).fail(function() {
+          alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
+        });
+        e.preventDefault();
+      });
+    });
+
+$(function() {
+      $('#modal-form').submit(function(e) {
+        var $form = $(this);
+        $.ajax({
+          type: $form.attr('method'),
+          url: $form.attr('action'),
+          data: $form.serialize()
+        }).done(function() {
+          alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
+        }).fail(function() {
+          alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
+        });
+        e.preventDefault();
+      });
+    });
