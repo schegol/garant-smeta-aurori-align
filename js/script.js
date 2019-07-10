@@ -67,7 +67,7 @@ window.addEventListener('scroll', function(){
 $(function() {
   $('#page-form').submit(function(e) {
     var $form = $(this);
-    var captcha = grecaptcha.getResponse();
+    var captcha = grecaptcha.getResponse(pageWidgetId);
     if (!captcha.length) {
       alert('Вы не ввели капчу!');
     } else {
@@ -88,8 +88,8 @@ $(function() {
 $(function() {
   $('#modal-form').submit(function(e) {
     var $form = $(this);
-    var captcha = grecaptcha.getResponse();
-    if (!captcha.length) {
+    var modalCaptcha = grecaptcha.getResponse(modalWidgetId);
+    if (!modalCaptcha.length) {
       alert('Вы не ввели капчу!');
     } else {
       $.ajax({

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ru">
   <head>
+    <title>Гарант Смета: услуги сметчика</title>
     <link rel="icon" href=​"favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -20,8 +21,19 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.google.com/recaptcha/api.js?hl=ru" async></script>
-    <title>Гарант Смета: услуги сметчика</title>
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit&hl=ru" async></script>
+    <script>
+      var pageWidgetId;
+      var modalWidgetId;
+      var recaptchaCallback = function() {
+        pageWidgetId = grecaptcha.render(document.getElementById('page-recaptcha'), {
+          'sitekey' : '6LeYr6wUAAAAAKUvFutGzgMXJZeFMfOmWF_b-jHh'
+        });
+        modalWidgetId = grecaptcha.render(document.getElementById('modal-recaptcha'), {
+          'sitekey' : '6LeYr6wUAAAAAKUvFutGzgMXJZeFMfOmWF_b-jHh'
+        });
+      };
+    </script>
   </head>
   <body class="index">
     <header class="header">
@@ -264,7 +276,7 @@
                 <input class="order-form-input" type="text" name="form-phone" id="form-phone" placeholder="Ваш телефон">
                 <label class="visually-hidden" for="form-message">Введите ваше сообщение</label>
                 <textarea class="order-form-input order-form-textarea" type="text" name="form-message" id="form-message" placeholder="Ваше сообщение*" required rows="4"></textarea>
-                <div class="g-recaptcha" data-sitekey="6LeYr6wUAAAAAKUvFutGzgMXJZeFMfOmWF_b-jHh"></div>
+                <div class="google-recaptcha" id="page-recaptcha"></div>
                 <button class="order-form-submit" id="page-form-submit" type="submit" name="form-submit">Отправить</button>
               </div>
             </fieldset>
@@ -318,7 +330,7 @@
                 <input class="order-form-input" type="text" name="form-phone" id="modal-form-phone" placeholder="Ваш телефон">
                 <label class="visually-hidden" for="form-message">Введите ваше сообщение</label>
                 <textarea class="order-form-input order-form-textarea" type="text" name="form-message" id="modal-form-message" placeholder="Ваше сообщение*" required rows="4"></textarea>
-                <div class="g-recaptcha" data-sitekey="6LeYr6wUAAAAAKUvFutGzgMXJZeFMfOmWF_b-jHh"></div>
+                <div class="google-recaptcha" id="modal-recaptcha"></div>
                 <button class="order-form-submit" id="modal-form-submit" type="submit" name="form-submit">Отправить</button>
               </div>
             </fieldset>

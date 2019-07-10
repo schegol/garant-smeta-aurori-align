@@ -649,7 +649,8 @@ main {
   background-color: rgba(7, 98, 187, .8);
 }
 
-.g-recaptcha {
+.google-recaptcha {
+  margin: 0;
   margin-bottom: 15px;
 }
 
