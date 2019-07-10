@@ -65,33 +65,46 @@ window.addEventListener('scroll', function(){
 //ajax-обработка формы//
 
 $(function() {
-      $('#page-form').submit(function(e) {
-        var $form = $(this);
-        $.ajax({
-          type: $form.attr('method'),
-          url: $form.attr('action'),
-          data: $form.serialize()
-        }).done(function() {
-          alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
-        }).fail(function() {
-          alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
-        });
-        e.preventDefault();
+  $('#page-form').submit(function(e) {
+    var $form = $(this);
+    var captcha = grecaptcha.getResponse();
+    if (!captcha.length) {
+      alert('Вы не ввели капчу!');
+    } else {
+      $.ajax({
+        type: $form.attr('method'),
+        url: $form.attr('action'),
+        data: $form.serialize()
+      }).done(function() {
+        alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
+      }).fail(function() {
+        alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
       });
-    });
+    };
+    e.preventDefault();
+  });
+});
 
 $(function() {
-      $('#modal-form').submit(function(e) {
-        var $form = $(this);
-        $.ajax({
-          type: $form.attr('method'),
-          url: $form.attr('action'),
-          data: $form.serialize()
-        }).done(function() {
-          alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
-        }).fail(function() {
-          alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
+  $('#modal-form').submit(function(e) {
+    var $form = $(this);
+    var captcha = grecaptcha.getResponse();
+    if (!captcha.length) {
+      alert('Вы не ввели капчу!');
+    } else {
+      $.ajax({
+        type: $form.attr('method'),
+        url: $form.attr('action'),
+        data: $form.serialize()
+      }).done(function() {
+        $(function () {
+          $('#order-modal').modal('toggle');
         });
-        e.preventDefault();
+        alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
+      }).fail(function() {
+        alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
       });
-    });
+    };
+    e.preventDefault();
+  });
+});
