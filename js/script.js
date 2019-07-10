@@ -69,16 +69,16 @@ $(function() {
     var $form = $(this);
     var captcha = grecaptcha.getResponse(pageWidgetId);
     if (!captcha.length) {
-      alert('Вы не ввели капчу!');
+      $('#invalid-captcha').fadeIn().delay(1000).fadeOut();
     } else {
       $.ajax({
         type: $form.attr('method'),
         url: $form.attr('action'),
         data: $form.serialize()
       }).done(function() {
-        alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
+        $('#message-sent').fadeIn().delay(1500).fadeOut();
       }).fail(function() {
-        alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
+        $('#message-error').fadeIn().delay(1500).fadeOut();
       });
     };
     e.preventDefault();
@@ -90,7 +90,7 @@ $(function() {
     var $form = $(this);
     var modalCaptcha = grecaptcha.getResponse(modalWidgetId);
     if (!modalCaptcha.length) {
-      alert('Вы не ввели капчу!');
+      $('#invalid-captcha').fadeIn().delay(1000).fadeOut();
     } else {
       $.ajax({
         type: $form.attr('method'),
@@ -100,9 +100,9 @@ $(function() {
         $(function () {
           $('#order-modal').modal('toggle');
         });
-        alert('Сообщение отправлено! Мы скоро свяжемся с вами.');
+        $('#message-sent').fadeIn().delay(1500).fadeOut();
       }).fail(function() {
-        alert('Ошибка отправки, обновите страницу и попробуйте еще раз.');
+        $('#message-error').fadeIn().delay(1500).fadeOut();
       });
     };
     e.preventDefault();
