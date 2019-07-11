@@ -49,6 +49,13 @@ $('a[href*="#"]')
     }
   });
 
+//phone mask://
+
+$(function() {
+  $('#form-phone').mask('+7 (999) 999-99-99');
+  $('#modal-form-phone').mask('+7 (999) 999-99-99');
+});
+
 //ajax-обработка формы//
 
 $(function() {
