@@ -113,7 +113,6 @@ main {
   background-color: #28272d;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
 }
 
@@ -887,7 +886,7 @@ main {
   position: fixed;
   display: none;
   width: 300px;
-  height: 200px;
+  height: 160px;
   top: 50%;
   left: 50%;
   margin: 0;
@@ -906,48 +905,35 @@ main {
   z-index: 100000;
 }
 
-.alert-wrap {
+.alert-message {
+  position: relative;
   display: flex;
-
   justify-content: center;
   align-items: center;
+  padding: 10px 15px 10px 100px;
+  max-width: 100%;
   height: 100%;
 }
 
-.alert-icon {
-  position: relative;
-  flex-shrink: 0;
-  width: 100px;
-  height: 100px;
-}
-
-.alert-icon::after {
+.alert-message::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 15px;
   width: 80px;
   height: 80px;
 
   background-repeat: no-repeat;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
 
-.message-error .alert-icon::after,
-.message-invalid-captcha .alert-icon::after {
+.message-error .alert-message::after,
+.message-invalid-captcha .alert-message::after {
   background-image: url(../img/alert-error.svg);
 }
 
-.message-sent .alert-icon::after {
+.message-sent .alert-message::after {
   background-image: url(../img/alert-check.svg);
-}
-
-.alert-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px 10px 0;
-  max-width: 100%;
 }
 
 .alert span {
