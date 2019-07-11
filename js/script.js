@@ -56,16 +56,28 @@ $(function() {
     var $form = $(this);
     var captcha = grecaptcha.getResponse(pageWidgetId);
     if (!captcha.length) {
-      $('#invalid-captcha').fadeIn().delay(1000).fadeOut();
+      $('#page-form-submit').prop('disabled', true);
+      $('#invalid-captcha').fadeIn().delay(1000);
+      $('#invalid-captcha').fadeOut('slow', function() {
+         $('#page-form-submit').prop('disabled', false);
+      });
     } else {
       $.ajax({
         type: $form.attr('method'),
         url: $form.attr('action'),
         data: $form.serialize()
       }).done(function() {
-        $('#message-sent').fadeIn().delay(1500).fadeOut();
+        $('#page-form-submit').prop('disabled', true);
+        $('#message-sent').fadeIn().delay(1500);
+        $('#message-sent').fadeOut('slow', function() {
+           $('#page-form-submit').prop('disabled', false);
+        });
       }).fail(function() {
-        $('#message-error').fadeIn().delay(1500).fadeOut();
+        $('#page-form-submit').prop('disabled', true);
+        $('#message-error').fadeIn().delay(1500);
+        $('#message-error').fadeOut('slow', function() {
+           $('#page-form-submit').prop('disabled', false);
+        });
       });
     };
     e.preventDefault();
@@ -77,7 +89,11 @@ $(function() {
     var $form = $(this);
     var modalCaptcha = grecaptcha.getResponse(modalWidgetId);
     if (!modalCaptcha.length) {
-      $('#invalid-captcha').fadeIn().delay(1000).fadeOut();
+      $('#modal-form-submit').prop('disabled', true);
+      $('#invalid-captcha').fadeIn().delay(1000);
+      $('#invalid-captcha').fadeOut('slow', function() {
+         $('#modal-form-submit').prop('disabled', false);
+      });
     } else {
       $.ajax({
         type: $form.attr('method'),
@@ -89,7 +105,11 @@ $(function() {
         });
         $('#message-sent').fadeIn().delay(1500).fadeOut();
       }).fail(function() {
-        $('#message-error').fadeIn().delay(1500).fadeOut();
+        $('#modal-form-submit').prop('disabled', true);
+        $('#message-error').fadeIn().delay(1500);
+        $('#message-error').fadeOut('slow', function() {
+           $('#modal-form-submit').prop('disabled', false);
+        });
       });
     };
     e.preventDefault();
