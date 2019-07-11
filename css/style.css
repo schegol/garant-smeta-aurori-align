@@ -27,6 +27,11 @@ main {
   flex-grow: 1;
 }
 
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;

@@ -72,6 +72,8 @@ $(function() {
         $('#message-sent').fadeOut('slow', function() {
            $('#page-form-submit').prop('disabled', false);
         });
+        $('input[type="text"],input[type="email"],textarea').val('');
+        grecaptcha.reset(pageWidgetId);
       }).fail(function() {
         $('#page-form-submit').prop('disabled', true);
         $('#message-error').fadeIn().delay(1500);
@@ -104,6 +106,8 @@ $(function() {
           $('#order-modal').modal('toggle');
         });
         $('#message-sent').fadeIn().delay(1500).fadeOut();
+        $('input[type="text"],input[type="email"],textarea').val('');
+        grecaptcha.reset(modalWidgetId);
       }).fail(function() {
         $('#modal-form-submit').prop('disabled', true);
         $('#message-error').fadeIn().delay(1500);
