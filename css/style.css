@@ -238,8 +238,8 @@ textarea:invalid {
 }
 
 .second-level-heading {
-  margin-top: 6.25rem;
-  margin-bottom: 2.2rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 
   font-weight: 700;
   font-size: 2.1rem;
@@ -249,7 +249,7 @@ textarea:invalid {
 }
 
 .section-list .row {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .doc-types-item {
@@ -344,10 +344,6 @@ textarea:invalid {
   line-height: 1;
 }
 
-.services-heading {
-  margin-bottom: 3.125rem;
-}
-
 .services-item {
   position: relative;
 
@@ -404,6 +400,9 @@ textarea:invalid {
 
 .price-item-heading {
   position: relative;
+  -ms-flex-item-align: stretch;
+   -ms-grid-row-align: stretch;
+           align-self: stretch;
 
   font-size: 1.5rem;
   line-height: 1.1;
@@ -974,7 +973,7 @@ textarea:invalid {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023.98px) {
   .introductions {
     background-image: url(../img/calculator-medium.jpg);
   }
@@ -984,9 +983,14 @@ textarea:invalid {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .nav-item {
     border-top: 1px dotted #000000;
+  }
+
+  .second-level-heading {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
   }
 
   .doc-types-heading {
@@ -1010,7 +1014,7 @@ textarea:invalid {
   }
 }
 
-@media (min-width: 576px) and (max-width: 992px) {
+@media (min-width: 576px) and (max-width: 991.98px) {
   .introductions-description {
     font-size: 1.3rem;
     line-height: 1.5rem;
@@ -1026,13 +1030,13 @@ textarea:invalid {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .software-list-image {
     margin-top: 4rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
   .introductions-description {
     font-size: 1.2rem;
     line-height: 1.35rem;
